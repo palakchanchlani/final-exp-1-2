@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Customized T-shirt</title>
+</head>
+<body background="bg-img.jpeg" text="black"></body>
+
+    <h1 align="center">Order Your Customized T-shirt</h1>
+
+    <table border="1" cellpadding="10" cellspacing="0" width="750" bgcolor="white" align="center">
+        <form action="/submit-order" method="post">
+
+            <!-- T-shirt Customization Section -->
+            <tr>
+                <td colspan="2" bgcolor="white">
+                    <h2 align="center">T-shirt Details</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Tagline on the Shirt:</b></td>
+                <td><input type="text" name="tagline" placeholder="Enter your tagline" required size="50"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Select T-shirt Color:</b></td>
+                <td>
+                    <select name="color" required>
+                        <option value="" disabled selected>Select color</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Select T-shirt Size:</b></td>
+                <td>
+                    <select name="size" required>
+                        <option value="" disabled selected>Select size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Quantity:</b></td>
+                <td><input type="number" name="quantity" placeholder="Enter quantity" min="1" required></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Delivery Date:</b></td>
+                <td><input type="date" name="deliveryDate" required></td>
+            </tr>
+
+            <!-- Delivery Details Section -->
+            <tr>
+                <td colspan="2" bgcolor="white">
+                    <h2 align="center">Delivery Information</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Recipient's Name:</b></td>
+                <td><input type="text" name="name" placeholder="Enter recipient's name" required size="50"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Delivery Address:</b></td>
+                <td><input type="text" name="address" placeholder="Enter delivery address" required size="50"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Recipient's Email:</b></td>
+                <td><input type="email" name="email" placeholder="Enter email" required size="50"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Phone Number:</b></td>
+                <td><input type="tel" name="phone" placeholder="Enter phone number" pattern="[6-9]{1}[0-9]{9}" 
+                    title="Phone number must be 10 digits long and start with 6, 7, 8, or 9" required size="50"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Additional Comments:</b></td>
+                <td><textarea name="comments" rows="3" placeholder="Any special instructions?" cols="50"></textarea></td>
+            </tr>
+
+            <!-- Buttons -->
+            <tr>
+                <td colspan="2" align="center" bgcolor="black">
+                    <input type="submit" value="Submit Order">
+                    <input type="reset" value="Reset Form">
+                </td>
+            </tr>
+
+        </form>
+    </table>
+
+</body>
+</html>
